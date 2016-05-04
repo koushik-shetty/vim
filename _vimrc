@@ -42,7 +42,7 @@ set tabstop=4 softtabstop=4 shiftwidth=4
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 set nowrap
-set noswapfile
+"set noswapfile
 "line number
 set nu
 set numberwidth=5
@@ -52,8 +52,9 @@ command NT NERDTreeToggle
 command ND NERDTree
 set runtimepath^=~/vimfiles/bundle/ctrlp.vim
 set runtimepath^=~/vimfiles/bundle/tabname.vim
-set dir=%USERPROFILE%\AppData\Local\Temp
-colorscheme torte
+set dir=%USERPROFILE%\AppData\Local\Temp\
+set backupdir=%USERPROFILE%\AppData\Local\Temp\
+colorscheme distinguished 
 nmap ¯ :NT<cr>
 nmap ® :ND<cr>
 set sh=bash

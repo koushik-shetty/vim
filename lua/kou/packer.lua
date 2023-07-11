@@ -26,7 +26,9 @@ return require('packer').startup(function(use)
             vim.cmd.colorscheme 'onedark'
         end
     })
-
+    --    use {'morhetz/gruvbox', config = function() vim.cmd.colorscheme("gruvbox") end }
+    --    use {'desertEx', config = function() vim.cmd.colorscheme("desertx") end }
+    use 'Mofiqul/vscode.nvim'
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',

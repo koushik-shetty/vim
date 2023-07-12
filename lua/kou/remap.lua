@@ -11,3 +11,5 @@ vim.keymap.set("v", "<leader>d", '"_d')
 --" replace currently selected text with default register
 --"-" without yanking it
 vim.keymap.set("v", "<leader>p", '"_dP')
+vim.keymap.set("v", "<C-c>", '"+y')
+

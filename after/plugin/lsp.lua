@@ -12,7 +12,8 @@ lsp.preset('recommended')
         'gopls',
         'clangd',
         'cssls',
-        'html'
+        'html',
+        'pyright',
     })
 
     -- Fix Undefined global 'vim'

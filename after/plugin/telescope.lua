@@ -6,4 +6,5 @@ vim.keymap.set('n', '<leader>km', builtin.keymaps, {})
 vim.keymap.set('n', '<leader>ps', function() 
 	builtin.grep_string({search = vim.fn.input("Grep > ")});
 end)
-
+vim.keymap.set('n', '<leader>/', builtin.current_buffer_fuzzy_find, {desc = 'search within current file'})
+vim.keymap.set('n', '<leader>of', builtin.oldfiles, {desc = 'find recently opened files'})

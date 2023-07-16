@@ -5,6 +5,11 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 --" delete without yanking
 vim.keymap.set("n", "<leader>d", '"_d')
 vim.keymap.set("n", "<c-s-v>", "<c-v>")
+vim.keymap.set("n", "M", "<C-w>|")
+vim.keymap.set("n", "<C-m>", "<C-w>=")
+vim.keymap.set("n", "<Tab>", "<C-w>w")
+vim.keymap.set("n", "<S-Tab>", "<C-w>W")
+
 --" replace currently selected text with default register
 --"-" without yanking it
 vim.keymap.set("v", "<leader>d", '"_d')

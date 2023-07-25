@@ -1,9 +1,10 @@
 local lsp = require('lsp-zero').preset({})
 lsp.preset('recommended')
 
---lsp.on_attach(function(client, bufnr)
-    --	lsp.default_keymaps({buffer = bufnr})
-    --end)
+lsp.on_attach(function(client, bufnr)
+    lsp.default_keymaps({buffer = bufnr})
+    lsp.buffer_autoformat()
+end)
     --
     lsp.ensure_installed({
         'tsserver',
@@ -35,13 +36,15 @@ lsp.preset('recommended')
 
     -- (Optional) Configure lua language server for neovim
     require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
-    require'lspconfig'.gopls.setup{}
+    require'lspconfig'.gopls.setup{
+        cmd = {'gopls', '--remote=auto'}
+    }
     require('lspconfig').eslint.setup({
         single_file_support = false,
         on_attach = function(client, bufnr)
             vim.api.nvim_create_autocmd("BufWritePre", {
                 buffer = bufnr,
-                command = "EslintFixAll",
+                command = 'EslintFixAll',
             })
         end
     })

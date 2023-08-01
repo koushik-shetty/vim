@@ -49,9 +49,13 @@ return require('packer').startup(function(use)
             -- Autocompletion
             { 'hrsh7th/nvim-cmp' },     -- Required
             { 'hrsh7th/cmp-nvim-lsp' }, -- Required
-            { 'L3MON4D3/LuaSnip' },     -- Required
+            {
+                'L3MON4D3/LuaSnip',
+                dependencies = { "rafamadriz/friendly-snippets" },
+            }, -- Required
         },
 
         use 'ThePrimeagen/vim-be-good'
     }
+    use "rafamadriz/friendly-snippets"
 end)

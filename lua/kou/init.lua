@@ -9,3 +9,9 @@ require('telescope').setup {
         }
     }
 }
+
+require('onedark').setup {
+    highlights = {
+        ['@text.todo'] = { fg = '#FF0000' }
+    }
+}

@@ -2,11 +2,8 @@ require("kou")
 
 
 vim.api.nvim_create_autocmd('BufEnter', {
+    --pattern = { '*.py', '*.js', '*.ts', '*.jsx', '*.tsx' },
     pattern = '*',
-    command = 'colorscheme default'
-})
-vim.api.nvim_create_autocmd('BufEnter', {
-    pattern = { '*.py', '*.js', '*.ts', '*.jsx', '*.tsx' },
     command = 'colorscheme onedark'
 })
 vim.api.nvim_create_autocmd('BufEnter', {

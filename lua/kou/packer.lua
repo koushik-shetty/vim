@@ -58,4 +58,10 @@ return require('packer').startup(function(use)
         use 'ThePrimeagen/vim-be-good'
     }
     use "rafamadriz/friendly-snippets"
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
 end)

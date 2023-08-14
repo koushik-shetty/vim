@@ -14,10 +14,10 @@ vim.keymap.set("n", "<S-Tab>", "<C-w>W")
 vim.keymap.set("n", "<leader>v", "<C-w>v")
 vim.keymap.set("n", "<leader>s", "<C-w>s")
 
-
 -- Tabs
 vim.keymap.set('n', "<C-t>", "<cmd>tabnew<cr>")
 vim.keymap.set('n', "<A-Tab>", "<cmd>tabnext<cr>")
+
 --" replace currently selected text with default register
 --"-" without yanking it
 vim.keymap.set("v", "<leader>d", '"_d')

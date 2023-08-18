@@ -64,4 +64,13 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
+    use {
+        'amirali/yapf.nvim',
+        requires = { 'nvim-lua/plenary.nvim' },
+        config = function()
+            require('yapf').setup {
+                style = 'google'
+            }
+        end,
+    }
 end)

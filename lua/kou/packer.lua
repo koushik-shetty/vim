@@ -22,13 +22,15 @@ return require('packer').startup(function(use)
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
+
+    --
+    -- THEMES
+    --
     use({
         'navarasu/onedark.nvim',
         priority = 1000,
-        config = function()
-            vim.cmd.colorscheme 'onedark'
-        end
     })
+    use 'martinsione/darkplus.nvim'
     --    use {'morhetz/gruvbox', config = function() vim.cmd.colorscheme("gruvbox") end }
     --    use {'desertEx', config = function() vim.cmd.colorscheme("desertx") end }
     use 'Mofiqul/vscode.nvim'

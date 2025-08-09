@@ -18,6 +18,8 @@ echo "gacmp $1"
 
 alias c=clear
 alias e=exit
+alias ad="adb devices"
+alias nra="npm run android"
 
 alias obp="code ~/.bashrc"
 alias sbp="source ~/.bashrc"

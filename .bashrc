@@ -11,11 +11,22 @@ alias gco="git checkout"
 alias gpr="git pull -r"
 alias glo="git log --oneline"
 
-gacmp () {
-echo "gacmp $1"
-  gacm "$1"
-  git push
+
+function printErrorMessage() {
+	 echo -e "\033[1;31m$1\033[0m" 
 }
+
+function gacmp(){
+	if [ -z "$1" ]; then 
+		#echo -e "\033[1;31mError: Commit message not supplied\033[0m"
+		printErrorMessage "Error: Commit message not supplied"
+	else
+		gacm $1
+		gp
+	fi
+	
+}
+
 
 
 alias c=clear

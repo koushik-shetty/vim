@@ -21,7 +21,7 @@ function gacmp(){
 		#echo -e "\033[1;31mError: Commit message not supplied\033[0m"
 		printErrorMessage "Error: Commit message not supplied"
 	else
-		gacm $1
+		gacm "$1"
 		gp
 	fi
 	
